@@ -255,7 +255,7 @@ function createWindow(bartext, text, source, width, height, left, top) {
     
     mainWindow.appendChild(xButton);
     
-    xButton.setAttribute('onclick','closeInfoBox(this)');
+    xButton.onclick = function() { closeBox(xButton); };
     
     xButton.style.position = "absolute";
     
