@@ -7,6 +7,23 @@ head, body {
     background-color: #FFFFF4;
 }
 
+
+/*Main Structure*/
+
+
+/*Classes*/
+.largeText {
+    font-size: 24px;
+}
+.mediumText {
+    font-size: 20px;
+}
+.smallText {
+    font-size: 16px;
+}
+
+/*Specifics*/
+
 #landingBlock {
     font-family: Otsutome;
     text-align: left;
