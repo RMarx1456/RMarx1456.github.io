@@ -5,6 +5,7 @@
 
 head, body {
     background-color: #FFFFF4;
+    overflow-x: hidden;
 }
 
 
@@ -26,6 +27,10 @@ head, body {
     margin: 0;
 }
 
+.noFlowImage {
+    position: absolute;
+}
+
 /*Specifics*/
 
 #landingBlock {
@@ -34,6 +39,38 @@ head, body {
     width: 40vw;
     margin-left: calc(50% - 20vw);
     margin-top: 10vw;
+}
+
+#brightSakura {
+    width: 55vw;
+    height: 55vw;
     
+    z-index: -1;
+    left: 50vw;
+    top: 25vw;
+}
+#darkSakura {
+    width: 55vw;
+    height: 55vw;
     
+    z-index: -2;
+    left: 50vw;
+    top: 20vw;
+}
+
+#brightTorii {
+    width: 55vw;
+    height: 55vw;
+    
+    z-index: -1;
+    left: -25vw;
+    top: 120vw;
+}
+#darkTorii {
+    width: 55vw;
+    height: 55vw;
+    
+    z-index: -2;
+    left: -20vw;
+    top: 120vw;
 }
