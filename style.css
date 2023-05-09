@@ -1,3 +1,15 @@
+@font-face {
+    font-family: Otsutome;
+    src: url(Fonts/Otsutome.ttf);
+}
+
 head, body {
     background-color: #FFFFF4;
+}
+
+#landingBlock {
+    font-family: Otsutome;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
