@@ -31,8 +31,9 @@ head, body {
 #landingBlock {
     font-family: Otsutome;
     
-    width: 20vw;
+    width: 40vw;
     margin-left: calc(50% - 20vw);
+    margin-top: 10vw;
     
     
 }
