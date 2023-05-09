@@ -10,7 +10,12 @@ head, body {
     position: fixed;
 }
 
-
+#indexPage {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
 
 
 /*Main Structure*/
