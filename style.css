@@ -6,6 +6,14 @@
 head, body {
     background-color: #FFFFF4;
     overflow-x: hidden;
+    width: 100%;
+}
+
+#indexPage {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 }
 
 
@@ -32,6 +40,12 @@ head, body {
 }
 
 /*Specifics*/
+
+#indexPage {
+    max-width: 100%;
+    width: 100%;
+    
+}
 
 #landingBlock {
     font-family: Otsutome;
