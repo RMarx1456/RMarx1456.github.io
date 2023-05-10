@@ -10,12 +10,7 @@ head, body {
     position: fixed;
 }
 
-#indexPage {
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-}
+
 
 
 /*Main Structure*/
@@ -31,6 +26,12 @@ head, body {
 .smallText {
     font-size: 4vw;
 }
+.verySmallText {
+    font-size: 2vw;
+}
+.extremelySmallText {
+    font-size: 1vw;
+}
 
 .noMargin {
     margin: 0;
@@ -42,17 +43,26 @@ head, body {
 
 /*Specifics*/
 
+/*Wrapper div to prevent horizontal scrolling*/
 #indexPage {
-    max-width: 100%;
-    width: 100%;
+    overflow-x: hidden;
+    left: -5px;
+    width: 110%;
+    height: 100%;
+    position: fixed;
+}
+
+#sakuraText {
+    font-family: Otsutome;
     
+    color: rgb(255, 51, 204);
 }
 
 #landingBlock {
     font-family: Otsutome;
     
     width: 40vw;
-    margin-left: calc(50% - 20vw);
+    margin-left: calc(50% - 25vw);
     margin-top: 10vw;
 }
 
@@ -74,16 +84,16 @@ head, body {
 }
 
 #brightTorii {
-    width: 55vw;
-    height: 55vw;
+    width: 57.5vw;
+    height: 57.5vw;
     
     z-index: -1;
     left: -25vw;
     top: calc(100vh - 47.5vw);
 }
 #darkTorii {
-    width: 55vw;
-    height: 55vw;
+    width: 57.5vw;
+    height: 57.5vw;
     
     z-index: -2;
     left: -20vw;
