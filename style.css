@@ -229,7 +229,7 @@ head, body {
     
     z-index: -1;
     left: 70vw;
-    top: 112.5vh;
+    top: 120vh;
 }
 #darkDragon {
     width: 30vw;
@@ -237,5 +237,5 @@ head, body {
     
     z-index: -2;
     left: 70vw;
-    top: 110vh;
+    top: 117.5vh;
 }
