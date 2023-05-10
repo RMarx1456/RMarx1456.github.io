@@ -187,6 +187,71 @@ head, body {
     text-decoration: none;
 }
 
+/*Dragon Section*/
+
+#dragonText {
+    font-family: Otsutome;
+    
+    font-size: 3.5vw;
+    
+    color: rgb(255, 51, 204);
+    
+    height: 50vh;
+}
+
+#dragonText > .halfText {
+    margin-top: 7.5vw;
+    margin-left: 5vw;
+    position: float;
+    
+    /*Override*/
+    width: 60vw;
+}
+#dragonText > .fullText {
+    margin-top: 7.5vw;
+    margin-left: 5vw;
+    position: float;
+    
+}
+
+
+
+#dragonText > #htmlButton {
+    background-color: rgb(230, 0, 172);
+    color: white;
+    text-align: center;
+    font-size: 6.5vw;
+    
+    display: block;
+    margin-left: 20vh;
+    margin-top: 40px;
+    width: 20vw;
+    height: 9vw;
+    
+    border-radius: 10px;
+}
+
+#dragonText > #htmlButton > a {
+    margin-top: 5px;
+}
+
+#dragonText > #htmlButton > a:link {
+    color: white;
+    text-decoration: none;
+}
+#dragonText > #htmlButton > a:visited {
+    color: white;
+    text-decoration: none;
+}
+#dragonText > #htmlButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+#dragonText > #htmlButton > a:active {
+    color: white;
+    text-decoration: none;
+}
+
 /*Background Images*/
 
 #brightSakura {
@@ -229,7 +294,7 @@ head, body {
     
     z-index: -1;
     left: 70vw;
-    top: 117.5vh;
+    top: 120vh;
 }
 #darkDragon {
     width: 30vw;
@@ -237,5 +302,5 @@ head, body {
     
     z-index: -2;
     left: 70vw;
-    top: 115vh;
+    top: 117.5vh;
 }
