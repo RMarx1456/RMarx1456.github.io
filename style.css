@@ -33,6 +33,12 @@ head, body {
     font-size: 1vw;
 }
 
+.halfText-left {
+    width: 50vw;
+    left: 2.5vw;
+    position: absolute;
+}
+
 .noMargin {
     margin: 0;
 }
@@ -54,6 +60,8 @@ head, body {
 
 #sakuraText {
     font-family: Otsutome;
+    
+    font-size: 3.5vw;
     
     color: rgb(255, 51, 204);
 }
