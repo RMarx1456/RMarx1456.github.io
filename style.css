@@ -63,6 +63,16 @@ head, body {
     position: fixed;
 }
 
+#landingBlock {
+    font-family: Otsutome;
+    
+    width: 40vw;
+    margin-left: calc(50% - 25vw);
+    margin-top: 10vw;
+}
+
+/*Sakura Section*/
+
 #sakuraText {
     font-family: Otsutome;
     
@@ -83,13 +93,14 @@ head, body {
 }
 
 #sakuraText > #javaButton {
-    background-color: rgb(255, 51, 204);
+    background-color: rgb(230, 0, 172);
     color: white;
     text-align: center;
     font-size: 8vw;
     
     display: block;
     margin-left: 20vh;
+    margin-top: 40px;
     width: 20vw;
     height: 9vw;
     
@@ -118,13 +129,65 @@ head, body {
 }
 
 
-#landingBlock {
+/*Torii Section*/
+
+#toriiText {
     font-family: Otsutome;
     
-    width: 40vw;
-    margin-left: calc(50% - 25vw);
-    margin-top: 10vw;
+    font-size: 3.5vw;
+    
+    color: rgb(0, 255, 255);
+    
+    height: 50vh;
 }
+
+#toriiText > .halfText {
+    margin-top: -2.5vh;
+    margin-left: 40vw;
+    position: float;
+}
+#toriiText > .fullText {
+    margin-left: 5vw;
+    position: float;
+}
+
+#toriiText > #assemblyButton {
+    background-color: rgb(0, 255, 255);
+    color: white;
+    text-align: center;
+    font-size: 8vw;
+    
+    display: block;
+    margin-left: 17.5vh;
+    margin-top: 40px;
+    width: 30vw;
+    height: 9vw;
+    
+    border-radius: 10px;
+}
+
+#toriiText > #assemblyButton > a {
+    margin-top: 5px;
+}
+
+#toriiText > #assemblyButton > a:link {
+    color: white;
+    text-decoration: none;
+}
+#toriiText > #assemblyButton > a:visited {
+    color: white;
+    text-decoration: none;
+}
+#toriiText > #assemblyButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+#toriiText > #assemblyButton > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+/*Background Images*/
 
 #brightSakura {
     width: 55vw;
@@ -149,7 +212,7 @@ head, body {
     
     z-index: -1;
     left: -25vw;
-    top: calc(100vh - 40vh);
+    top: 60vh;
 }
 #darkTorii {
     width: 57.5vw;
@@ -157,5 +220,22 @@ head, body {
     
     z-index: -2;
     left: -20vw;
-    top: calc(100vh - 40vh);
+    top: 60vh;
+}
+
+#brightDragon {
+    width: 30vw;
+    height: 60vw;
+    
+    z-index: -1;
+    left: 70vw;
+    top: 112.5vh;
+}
+#darkDragon {
+    width: 30vw;
+    height: 60vw;
+    
+    z-index: -2;
+    left: 70vw;
+    top: 110vh;
 }
