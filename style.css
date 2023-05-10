@@ -72,6 +72,7 @@ head, body {
     
     height: 50vh;
 }
+
 #sakuraText > .halfText {
     margin-left: 5vw;
     position: float;
@@ -80,6 +81,42 @@ head, body {
     margin-left: 5vw;
     position: float;
 }
+
+#sakuraText > #javaButton {
+    background-color: rgb(255, 51, 204);
+    color: white;
+    text-align: center;
+    font-size: 8vw;
+    
+    display: block;
+    margin-left: 20vh;
+    width: 20vw;
+    height: 9vw;
+    
+    border-radius: 10px;
+}
+
+#sakuraText > #javaButton > a {
+    margin-top: 5px;
+}
+
+#sakuraText > #javaButton > a:link {
+    color: white;
+    text-decoration: none;
+}
+#sakuraText > #javaButton > a:visited {
+    color: white;
+    text-decoration: none;
+}
+#sakuraText > #javaButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+#sakuraText > #javaButton > a:active {
+    color: white;
+    text-decoration: none;
+}
+
 
 #landingBlock {
     font-family: Otsutome;
@@ -112,7 +149,7 @@ head, body {
     
     z-index: -1;
     left: -25vw;
-    top: calc(100vh - 42.5vh);
+    top: calc(100vh - 40vh);
 }
 #darkTorii {
     width: 57.5vw;
@@ -120,5 +157,5 @@ head, body {
     
     z-index: -2;
     left: -20vw;
-    top: calc(100vh - 42.5vh);
+    top: calc(100vh - 40vh);
 }
