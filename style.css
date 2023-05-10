@@ -97,7 +97,7 @@ head, body {
     
     z-index: -1;
     left: -25vw;
-    top: calc(100vh - 47.5vw);
+    top: calc(100vh - 47.5vh);
 }
 #darkTorii {
     width: 57.5vw;
@@ -105,5 +105,5 @@ head, body {
     
     z-index: -2;
     left: -20vw;
-    top: calc(100vh - 47.5vw);
+    top: calc(100vh - 47.5vh);
 }
