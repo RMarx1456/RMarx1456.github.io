@@ -33,11 +33,16 @@ head, body {
     font-size: 1vw;
 }
 
-.halfText-left {
-    width: 50vw;
-    left: 2.5vw;
-    position: absolute;
+.fullText {
+    width: 90vw;
+    display: block;
 }
+
+.halfText {
+    width: 50vw;
+    display: block;
+}
+
 
 .noMargin {
     margin: 0;
@@ -64,6 +69,16 @@ head, body {
     font-size: 3.5vw;
     
     color: rgb(255, 51, 204);
+    
+    height: 50vh;
+}
+#sakuraText > .halfText {
+    margin-left: 5vw;
+    position: float;
+}
+#sakuraText > .fullText {
+    margin-left: 5vw;
+    position: float;
 }
 
 #landingBlock {
@@ -97,7 +112,7 @@ head, body {
     
     z-index: -1;
     left: -25vw;
-    top: calc(100vh - 47.5vh);
+    top: calc(100vh - 42.5vh);
 }
 #darkTorii {
     width: 57.5vw;
@@ -105,5 +120,5 @@ head, body {
     
     z-index: -2;
     left: -20vw;
-    top: calc(100vh - 47.5vh);
+    top: calc(100vh - 42.5vh);
 }
