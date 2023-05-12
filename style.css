@@ -12,11 +12,11 @@ head, body {
 
 
 
+/*
+@media screen and (max-width: 340px) {
+Main Structure
 
-/*Main Structure*/
 
-
-/*Classes*/
 .largeText {
     font-size: 12vw;
 }
@@ -52,9 +52,7 @@ head, body {
     position: absolute;
 }
 
-/*Specifics*/
 
-/*Wrapper div to prevent horizontal scrolling*/
 #indexPage {
     overflow-x: hidden;
     left: -5px;
@@ -71,7 +69,6 @@ head, body {
     margin-top: 10vw;
 }
 
-/*Sakura Section*/
 
 #sakuraText {
     font-family: Otsutome;
@@ -100,7 +97,7 @@ head, body {
     
     display: block;
     margin-left: 20vh;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 20vw;
     height: 9vw;
     
@@ -129,7 +126,6 @@ head, body {
 }
 
 
-/*Torii Section*/
 
 #toriiText {
     font-family: Otsutome;
@@ -159,7 +155,7 @@ head, body {
     
     display: block;
     margin-left: 17.5vh;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 30vw;
     height: 9vw;
     
@@ -187,7 +183,6 @@ head, body {
     text-decoration: none;
 }
 
-/*Dragon Section*/
 
 #dragonText {
     font-family: Otsutome;
@@ -204,7 +199,7 @@ head, body {
     margin-left: 5vw;
     position: float;
     
-    /*Override*/
+
     width: 60vw;
 }
 #dragonText > .fullText {
@@ -224,7 +219,7 @@ head, body {
     
     display: block;
     margin-left: 20vh;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 20vw;
     height: 9vw;
     
@@ -252,7 +247,6 @@ head, body {
     text-decoration: none;
 }
 
-/*Ryu Section*/
 
 #ryuText {
     font-family: Otsutome;
@@ -268,11 +262,10 @@ head, body {
     margin-left: 35vw;
     margin-top: 7.5vh;
     
-    /*Override*/
+
     width: 60vw;
 }
 
-/*Background Images*/
 
 #brightSakura {
     width: 55vw;
@@ -341,3 +334,340 @@ head, body {
     left: -19vw;
     top: 171vh;
 }
+*/
+
+@media screen and (max-width: 480px) {
+
+#mobilePage {
+    overflow-x: hidden;
+
+    left: -5vw;
+    top: 2.5px;
+    width: 110%;
+    height: 100%;
+    position: fixed;
+    
+}
+#desktopPage {
+    display: none;
+}
+
+
+
+/*Classes*/
+
+.largeText {
+    font-size: 1.5em;
+}
+.mediumText {
+    font-size: 1em;
+}
+.smallText {
+    font-size: 0.5em;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.section {
+    position: relative;
+    display: block;
+}
+
+.noFlowImage {
+    position: absolute;
+}
+
+.backgroundImageHolder {
+    display: inline-block;
+}
+
+/*Specifics*/    
+
+/*Landing*/
+#landingBlock {
+    position: relative;
+    display: block;
+    
+    width: 8.5em;
+    margin-left: calc(50% - 4.25em);
+    margin-top: 2.5em;
+    
+    font-family: Otsutome;
+}
+
+#landingBlock > .largeText {
+    font-size: 2.5em;
+}
+#landingBlock > .smallText {
+    font-size: 0.75em;
+}
+
+/*Sakura Section*/
+
+#sakuraSection {
+    font-family: Otsutome;
+    color: rgb(255, 51, 204);
+    margin-left: 5%;
+}
+
+#sakuraSection > .halfText {
+    width: 50vw;
+    margin-left: 2.5vw;
+    margin-top: 10vw;
+    display: inline-block;
+    
+    font-size: 3.5vw;
+}
+
+#sakuraSection > .fullText {
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-top: -2vw;
+    
+    font-size: 3.5vw;
+}
+
+#sakuraSection > #javaButton {
+    background-color: rgb(230, 0, 172);
+    color: white;
+    text-align: center;
+    font-size: 7.5vw;
+    
+    margin-left: calc(50vw - 1em);
+    
+    width: 2em;
+    
+    
+    border-radius: 10px;
+}
+
+#sakuraSection > #javaButton > a {
+    margin-top: 5px;
+}
+
+#sakuraSection > #javaButton > a:link {
+    color: white;
+    text-decoration: none;
+}
+#sakuraSection > #javaButton > a:visited {
+    color: white;
+    text-decoration: none;
+}
+#sakuraSection > #javaButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+#sakuraSection > #javaButton > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#brightSakura {
+    z-index: -1;
+    
+    width: 50vw;
+    height: 50vw;
+    
+    right: 0;
+    top: 4vw;
+}
+#darkSakura {
+    z-index: -2;
+    
+    width: 50vw;
+    height: 50vw;
+    
+    right: 0vw;
+}
+
+/*Torii Section*/
+
+#toriiSection {
+    font-family: Otsutome;
+    color: rgb(0, 255, 255);
+}
+
+#toriiSection > .halfText {
+    width: 70vw;
+    margin-left: 30vw;
+    margin-top: 6vw;
+    display: inline-block;
+    
+    font-size: 3.5vw;
+}
+
+#toriiSection > .fullText {
+    width: 95vw;
+    margin-left: 7.5vw;
+    
+    font-size: 3.5vw;
+}
+
+#toriiSection > #assemblyButton {
+    background-color: rgb(0, 179, 179);
+    color: white;
+    text-align: center;
+    font-size: 7.5vw;
+    
+    margin-left: calc(50vw - 1.5em);
+    
+    width: 4em;
+    
+    
+    border-radius: 10px;
+}
+
+#toriiSection > #assemblyButton > a {
+    margin-top: 5px;
+}
+
+#toriiSection > #assemblyButton > a:link {
+    color: white;
+    text-decoration: none;
+}
+#toriiSection > #assemblyButton > a:visited {
+    color: white;
+    text-decoration: none;
+}
+#toriiSection > #assemblyButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+#toriiSection > #assemblyButton > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#brightTorii {
+    z-index: -1;
+    
+    width: 50vw;
+    height: 50vw;
+    
+    left: -22.5vw;
+}
+#darkTorii {
+    z-index: -2;
+    
+    width: 50vw;
+    height: 50vw;
+    
+    left: -20vw;
+}
+
+/*Dragon Section*/
+
+#dragonSection {
+    font-family: Otsutome;
+    color: rgb(255, 51, 204);
+    margin-left: 5%;
+}
+
+#dragonSection > .halfText {
+    width: 70vw;
+    margin-left: 2.5vw;
+    margin-top: 10vw;
+    display: inline-block;
+    
+    font-size: 3.5vw;
+}
+
+#dragonSection > .fullText {
+    width: 95vw;
+    margin-left: 2.5vw;
+    
+    font-size: 3.5vw;
+}
+
+#dragonSection > #htmlButton {
+    background-color: rgb(230, 0, 172);
+    color: white;
+    text-align: center;
+    font-size: 7.5vw;
+    
+    margin-left: calc(50vw - 1.5em);
+    
+    width: 3em;
+    
+    
+    border-radius: 10px;
+}
+
+#dragonSection > #htmlButton > a {
+    margin-top: 5px;
+}
+
+#dragonSection > #htmlButton > a:link {
+    color: white;
+    text-decoration: none;
+}
+#dragonSection > #htmlButton > a:visited {
+    color: white;
+    text-decoration: none;
+}
+#dragonSection > #htmlButton > a:hover {
+    color: white;
+    text-decoration: none;
+}
+#dragonSection > #htmlButton > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#brightDragon {
+    z-index: -1;
+    
+    width: 30vw;
+    height: 60vw;
+    
+    right: 0;
+    top: 4vw;
+}
+#darkDragon {
+    z-index: -2;
+    
+    width: 30vw;
+    height: 60vw;
+    
+    right: 0vw;
+}
+
+/*Ryu Section*/
+
+#ryuSection {
+    font-family: Otsutome;
+    color: rgb(0, 255, 255);
+}
+
+#ryuSection > .halfText {
+    width: 70vw;
+    margin-left: 30vw;
+    margin-top: 10vw;
+    display: inline-block;
+    
+    font-size: 3.5vw;
+}
+
+
+#brightRyu {
+    z-index: -1;
+    
+    width: 50vw;
+    height: 50vw;
+    
+    left: -16vw;
+}
+#darkRyu {
+    z-index: -2;
+    
+    width: 50vw;
+    height: 50vw;
+    
+    top: 1vw;
+    left: -15vw;
+}
+
+}
+
