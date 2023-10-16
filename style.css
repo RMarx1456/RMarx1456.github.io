@@ -10,9 +10,83 @@ head, body {
     position: fixed;
 }
 
+/*Desktop*/
 
+@media screen and (min-aspect-ratio: 1001/1000) {
+    
+    #mobilePage {
+        display: none;
+    }
+    
+    /*Fixed content*/
+    
+    #fixedContent {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #topLanding {
+        font-family: Otsutome;
+        
+        position: absolute;
+        width: 10vw;
+        left: calc(50% - 5vw);
+    }
+    
+    #topLanding > .largeText {
+        font-size: 3vw;
+        margin: 0;
+    }
+    #topLanding > .smallText {
+        font-size: 1vw;
+        margin: 0;
+    }
+    
+    #jumpButton {
+        color: rgb(180, 180, 180);
+        font-family: Otsutome;
+        font-size: 5vw;
+        
+        position: absolute;
+        left: calc(50% - 1.25vw);
+        top: 85vh;
+        width: 2.5vw;
+        
+    }
+    
+    #topLinks {
+        display: none;
+    }
+    
+    /*Classes*/
+    .noFlowImage {
+        position: absolute;
+    }
+    
+    
+    /*Sakura Section*/
+    
+    #brightSakura {
+        
+        width: max(50vh, 50vw);
+        
+        top: calc(min(15%, 5vh) + 2.5vw);
+        right: -2.5vw;
+        z-index: -1;
+    }
+    #darkSakura {
+        width: max(50vh, 50vw);
+        
+        top: min(15%, 5vh);
+        right: -2.5vw;
+        z-index: -2;
+    }
+    
+}
 
-@media screen and (max-width: 480px) {
+/*Mobile*/
+@media screen and (max-aspect-ratio: 1/1) {
 
 #mobilePage {
     overflow-x: hidden;
@@ -346,4 +420,6 @@ head, body {
 }
 
 }
+
+
 
