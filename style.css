@@ -1,0 +1,433 @@
+head, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (orientation: landscape) {
+    .frutiger {
+        font-family: Frutiger, serif;
+    }
+
+
+    body {
+        background-image: url("Images/Backgrounds/FAWater.png");
+        background-size: auto 125vh;
+
+    }
+    /*Navigation (top)*/
+    #mobileNavBar {
+        display: none;
+    }
+    #navBar {
+
+        background: rgba(0, 98, 255) none repeat scroll 0 0;
+
+        position: relative;
+        display: inline-block;
+
+        cursor: pointer;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+        border: 1px solid #242424;
+        border-radius: 4px;
+        box-shadow:
+                0 1px 0 rgba(255, 255, 255, 0.25),
+                0 1px 0 rgba(255, 255, 255, 0.25) inset,
+                0 0 0 rgba(0, 0, 0, 0.5) inset,
+                0 1.25rem 0 rgba(255, 255, 255, 0.08) inset,
+                0 -1.25rem 1.25rem rgba(0, 0, 0, 0.3) inset,
+                0 1.25rem 1.25rem rgba(255, 255, 255, 0.1) inset;
+
+        width: 100%;
+        text-align: center;
+    }
+    .navLinkContainer {
+        position: relative;
+        display: inline-block;
+        height: 25px;
+
+    }
+    .navLinkContainer:hover {
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+    .navLink {
+        background: rgba(0, 0, 0, 0);
+
+        display: inline-block;
+        padding-left: 0.809rem;
+        padding-right: 0.809rem;
+        cursor: pointer;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+
+        height: calc(25px + 0.618rem);
+        line-height: calc(25px + 0.618rem);
+        text-decoration: none;
+        text-align: center;
+        margin: 0;
+    }
+    .navLink:hover {
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+
+
+
+    /*Body (middle)*/
+    #centerpiece {
+        position: absolute;
+        width:240px;
+        height:240px;
+        left: calc(50% - 120px);
+        top: calc(50% - 120px);
+    }
+    #centerText {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        vertical-align: bottom;
+        font-weight: bold;
+
+        position:absolute;
+        width: 240px;
+        left: calc(50% - 120px);
+        top: calc(50% - 1.5vw);
+        margin: 0;
+    }
+    .bubbleLink {
+        position: absolute;
+        height: 125px;
+        width: 125px;
+    }
+    .bubble {
+        position: absolute;
+        height: 125px;
+        width: 125px;
+    }
+    .bubble > a > p {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .bubbleImage {
+        position: absolute;
+        height: 125px;
+        width: 125px;
+    }
+    .bubble > a > img {
+        position: absolute;
+    }
+
+    #musicBubble {
+        top: calc(50% - 125px/2);
+        left: calc(50% - 300px - 125px/2);
+    }
+    #musicImage {
+        width: 75px;
+        left: calc(125px/2 - 75px/2);
+        top: 10px;
+    }
+
+    #animeBubble {
+        top: calc(50% - 125px/2);
+        left: calc(50% + 300px - 125px/2);
+    }
+    #animeImage {
+        width: 75px;
+        left: calc(125px/2 - 75px/2);
+        top: 10px;
+    }
+
+    #programmingBubble{
+        top: calc(50% - 125px/2 - 200px);
+        left: calc(50% + 175px - 125px/2);
+    }
+    #programmingImage {
+        width: 60px;
+        left: calc(125px/2 - 60px/2);
+        top: 5px;
+    }
+    #programmingBubble > a > p {
+        left: -10px;
+    }
+
+    #aestheticsBubble {
+        top: calc(50% - 125px/2 - 200px);
+        left: calc(50% - 175px - 125px/2);
+    }
+    #aestheticsImage {
+        width: 75px;
+        left: calc(125px/2 - 75px/2);
+        top: 10px;
+    }
+
+    #gamesBubble{
+        top: calc(50% - 125px/2 + 200px);
+        left: calc(50% + 175px - 125px/2);
+    }
+    #gamesImage {
+        width: 75px;
+        left: calc(125px/2 - 75px/2);
+        top: 10px;
+    }
+
+    #drinksBubble {
+        top: calc(50% - 125px/2 + 200px);
+        left: calc(50% - 175px - 125px/2);
+    }
+    #drinksImage {
+        width: 75px;
+        left: calc(125px/2 - 75px/2);
+        top: 10px;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .frutiger {
+        font-family: Frutiger, serif;
+    }
+
+
+    body {
+        background-image: url("Images/Backgrounds/FAWater.png");
+        background-size: auto 125vh;
+        background-position: top;
+
+    }
+    /*Navigation (top)*/
+    #mobileNavBar {
+        background: rgba(0, 98, 255) none repeat scroll 0 0;
+
+        position: relative;
+        display: inline-block;
+
+        cursor: pointer;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+        border: 1px solid #242424;
+        border-radius: 4px;
+        box-shadow:
+                0 1px 0 rgba(255, 255, 255, 0.25),
+                0 1px 0 rgba(255, 255, 255, 0.25) inset,
+                0 0 0 rgba(0, 0, 0, 0.5) inset,
+                0 1.25rem 0 rgba(255, 255, 255, 0.08) inset,
+                0 -1.25rem 1.25rem rgba(0, 0, 0, 0.3) inset,
+                0 1.25rem 1.25rem rgba(255, 255, 255, 0.1) inset;
+
+        text-align: center;
+        width: 100%;
+
+    }
+    #mobileTopNav {
+        display: block;
+    }
+    #mobileNavBar > a {
+        display: block;
+        font-size: 55px;
+    }
+    #mobileBottomNav {
+        display: block;
+    }
+    .mobileNavLink {
+        display: inline-block;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+
+        text-align: center;
+        font-size: 40px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #navBar {
+
+        /*background: rgba(0, 98, 255) none repeat scroll 0 0;
+
+        position: relative;
+        display: inline-block;
+
+        cursor: pointer;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+        border: 1px solid #242424;
+        border-radius: 4px;
+        box-shadow:
+                0 1px 0 rgba(255, 255, 255, 0.25),
+                0 1px 0 rgba(255, 255, 255, 0.25) inset,
+                0 0 0 rgba(0, 0, 0, 0.5) inset,
+                0 1.25rem 0 rgba(255, 255, 255, 0.08) inset,
+                0 -1.25rem 1.25rem rgba(0, 0, 0, 0.3) inset,
+                0 1.25rem 1.25rem rgba(255, 255, 255, 0.1) inset;
+
+        width: 100%;
+        text-align: center;*/
+        display: none;
+    }
+
+    .navLinkContainer {
+        position: relative;
+        display: inline-block;
+        height: 25px;
+
+    }
+    .navLinkContainer:hover {
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+    .navLink {
+        /*background: rgba(0, 0, 0, 0);
+
+        display: inline-block;
+        padding-left: 0.809rem;
+        padding-right: 0.809rem;
+        cursor: pointer;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+
+        height: calc(25px + 0.618rem);
+        line-height: calc(25px + 0.618rem);
+        text-decoration: none;
+        text-align: center;
+        margin: 0;
+        font-size: 50px;*/
+        display: none;
+    }
+    .navLink:hover {
+        background-color: rgba(50, 50, 50, 0.5);
+    }
+
+
+
+    /*Body (middle)*/
+    #centerpiece {
+        position: absolute;
+        width:400px;
+        height:400px;
+        left: calc(50% - 200px);
+        top: 200px;
+    }
+    #centerText {
+        color: white;
+        text-align: center;
+        font-size: 80px;
+        vertical-align: bottom;
+        font-weight: bold;
+
+        position:absolute;
+        width: 400px;
+        left: calc(50% - 200px);
+        top: 350px;
+        margin: 0;
+    }
+    .bubbleLink {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+    }
+    .bubble {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+    }
+    .bubble > a > p {
+        color: white;
+        text-decoration: none;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .bubbleImage {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+    }
+    .bubble > a > img {
+        position: absolute;
+    }
+
+    #musicBubble {
+        top: calc(50% - 125px/2);
+        left: calc(50% - 300px - 200px/2);
+    }
+    #musicImage {
+        width: 125px;
+        left: calc(200px/2 - 125px/2);
+        top: 10px;
+    }
+
+    #animeBubble {
+        top: calc(50% - 125px/2);
+        left: calc(50% + 300px - 200px/2);
+    }
+    #animeImage {
+        width: 125px;
+        left: calc(200px/2 - 125px/2);
+        top: 10px;
+    }
+
+    #programmingBubble{
+        top: calc(50% - 125px/2 - 200px);
+        left: calc(50% + 175px - 200px/2);
+    }
+    #programmingImage {
+        width: 100px;
+        left: calc(200px/2 - 100px/2);
+        top: 5px;
+    }
+    #programmingBubble > a > p {
+        left: -40px;
+    }
+
+    #aestheticsBubble {
+        top: calc(50% - 125px/2 - 200px);
+        left: calc(50% - 175px - 200px/2);
+    }
+    #aestheticsImage {
+        width: 125px;
+        left: calc(200px/2 - 125px/2);
+        top: 10px;
+    }
+
+    #gamesBubble{
+        top: calc(50% - 125px/2 + 200px);
+        left: calc(50% + 175px - 200px/2);
+    }
+    #gamesImage {
+        width: 125px;
+        left: calc(200px/2 - 125px/2);
+        top: 10px;
+    }
+
+    #drinksBubble {
+        top: calc(50% - 125px/2 + 200px);
+        left: calc(50% - 175px - 200px/2);
+    }
+    #drinksImage {
+        width: 125px;
+        left: calc(200px/2 - 125px/2);
+        top: 10px;
+    }
+}
+
+
