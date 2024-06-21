@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Call Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>RAX</th>
+        <th>System Call</th>
+        <th>RDI</th>
+        <th>RSI</td>
+        <th>RDX</th>
+        <th>R10</th>
+        <th>R8</th>
+        <th>R9</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td>0</td><td><a href="">SYS_READ</a></td><td>unsigned int fd</td><td>char __user *buf</td><td>size_t count</td><td></td><td></td><td></td></tr>
+    <tr><td>1</td><td><a href="">SYS_WRITE</a></td><td>unsigned int fd</td><td>const char __user *buf</td><td>size_t count</td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td><a href="">SYS_OPEN</a></td><td>const char __user *filename</td><td>int flags</td><td>umode_t mode</td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td><a href="">SYS_CLOSE</a></td><td>unsigned int fd</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td><a href="">SYS_STAT</a></td><td>const char __user *filename</td><td>struct __old_kernel_stat __user *statbuf</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td><a href="">SYS_FSTAT</a></td><td>unsigned int fd</td><td>struct __old_kernel_stat __user *statbuf</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>6</td><td><a href="">SYS_LSTAT</a></td><td>const char __user *filename</td><td>struct __old_kernel_stat __user *statbuf</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>7</td><td><a href="">SYS_POLL</a></td><td>struct pollfd __user *ufds</td><td>unsigned int nfds</td><td>int timeout</td><td></td><td></td><td></td></tr>
+    <tr><td>8</td><td><a href="">SYS_LSEEK</a></td><td>unsigned int fd</td><td>off_t offset</td><td>unsigned int whence</td><td></td><td></td><td></td></tr>
+    <tr><td>9</td><td><a href="">SYS_MMAP</a></td><td>unsigned long addr</td><td>unsigned long len</td><td>unsigned long prot</td><td>unsigned long flags</td><td>unsigned long fd</td><td>unsigned long pgoff</td></tr>
+    <tr><td>10</td><td><a href="">SYS_MPROTECT</a></td><td>unsigned long start</td><td>size_t len</td><td>unsigned long prot</td><td></td><td></td><td></td></tr>
+    <tr><td>11</td><td><a href="">SYS_MUNMAP</a></td><td>unsigned long addr</td><td>size_t len</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>12</td><td><a href="">SYS_BRK</a></td><td>unsigned long brk</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>13</td><td><a href="">SYS_RT_SIGACTION</a></td><td>int signum</td><td>const struct sigaction __user *act</td><td>struct sigaction __user *oldact</td><td>size_t sigsetsize</td><td></td><td></td></tr>
+    <tr><td>14</td><td><a href="">SYS_RT_SIGPROCMASK</a></td><td>int how</td><td>sigset_t __user *set</td><td>sigset_t __user *oset</td><td>size_t sigsetsize</td><td></td><td></td></tr>
+    <tr><td>15</td><td><a href="">SYS_RT_SIGRETURN</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>16</td><td><a href="">SYS_IOCTL</a></td><td>unsigned int fd</td><td>unsigned int cmd</td><td>unsigned long arg</td><td></td><td></td><td></td></tr>
+    <tr><td>17</td><td><a href="">SYS_PREAD64</a></td><td>unsigned int fd</td><td>char __user *buf</td><td>size_t count</td><td>loff_t pos</td><td></td><td></td></tr>
+    <tr><td>18</td><td><a href="">SYS_PWRITE64</a></td><td>unsigned int fd</td><td>const char __user *buf</td><td>size_t count</td><td>loff_t pos</td><td></td><td></td></tr>
+    <tr><td>19</td><td><a href="">SYS_READV</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td></td><td></td><td></td></tr>
+    <tr><td>20</td><td><a href="">SYS_WRITEV</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td></td><td></td><td></td></tr>
+    <tr><td>21</td><td><a href="">SYS_ACCESS</a></td><td>const char __user *filename</td><td>int mode</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>22</td><td><a href="">SYS_PIPE</a></td><td>int __user *fildes</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>23</td><td><a href="">SYS_SELECT</a></td><td>int n</td><td>fd_set __user *inp</td><td>fd_set __user *outp</td><td>fd_set __user *exp</td><td>struct __kernel_old_timeval __user *tvp</td><td></td></tr>
+    <tr><td>24</td><td><a href="">SYS_SCHED_YIELD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>25</td><td><a href="">SYS_MREMAP</a></td><td>unsigned long addr</td><td>unsigned long old_len</td><td>unsigned long new_len</td><td>unsigned long flags</td><td>unsigned long new_addr</td><td></td></tr>
+    <tr><td>26</td><td><a href="">SYS_MSYNC</a></td><td>unsigned long start</td><td>size_t len</td><td>int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>27</td><td><a href="">SYS_MINCORE</a></td><td>unsigned long start</td><td>size_t len</td><td>unsigned char __user *vec</td><td></td><td></td><td></td></tr>
+    <tr><td>28</td><td><a href="">SYS_MADVISE</a></td><td>unsigned long start</td><td>size_t len</td><td>int behavior</td><td></td><td></td><td></td></tr>
+    <tr><td>29</td><td><a href="">SYS_SHMGET</a></td><td>key_t key</td><td>size_t size</td><td>int flag</td><td></td><td></td><td></td></tr>
+    <tr><td>30</td><td><a href="">SYS_SHMAT</a></td><td>int shmid</td><td>char __user *shmaddr</td><td>int shmflg</td><td></td><td></td><td></td></tr>
+    <tr><td>31</td><td><a href="">SYS_SHMCTL</a></td><td>int shmid</td><td>int cmd</td><td>struct shmid_ds __user *buf</td><td></td><td></td><td></td></tr>
+    <tr><td>32</td><td><a href="">SYS_DUP</a></td><td>unsigned int fildes</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>33</td><td><a href="">SYS_DUP2</a></td><td>unsigned int oldfd</td><td>unsigned int newfd</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>34</td><td><a href="">SYS_PAUSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>35</td><td><a href="">SYS_NANOSLEEP</a></td><td>struct __kernel_timespec __user *rqtp</td><td>struct __kernel_timespec __user *rmtp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>36</td><td><a href="">SYS_GETITIMER</a></td><td>int which</td><td>struct __kernel_old_itimerval __user *value</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>37</td><td><a href="">SYS_ALARM</a></td><td>unsigned int seconds</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>38</td><td><a href="">SYS_SETITIMER</a></td><td>int which</td><td>struct __kernel_old_itimerval __user *value</td><td>struct __kernel_old_itimerval __user *ovalue</td><td></td><td></td><td></td></tr>
+    <tr><td>39</td><td><a href="">SYS_GETPID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>40</td><td><a href="">SYS_SENDFILE</a></td><td>int out_fd</td><td>int in_fd</td><td>off_t __user *offset</td><td>size_t count</td><td></td><td></td></tr>
+    <tr><td>41</td><td><a href="">SYS_SOCKET</a></td><td>int domain</td><td>int type</td><td>int protocol</td><td></td><td></td><td></td></tr>
+    <tr><td>42</td><td><a href="">SYS_CONNECT</a></td><td>int fd</td><td>struct sockaddr __user *uservaddr</td><td>int addrlen</td><td></td><td></td><td></td></tr>
+    <tr><td>43</td><td><a href="">SYS_ACCEPT</a></td><td>int fd</td><td>struct sockaddr __user *upeer_sockaddr</td><td>int __user *upeer_addrlen</td><td></td><td></td><td></td></tr>
+    <tr><td>44</td><td><a href="">SYS_SENDTO</a></td><td>int fd</td><td>void __user *buff</td><td>size_t len</td><td>unsigned int flags</td><td>struct sockaddr __user *addr</td><td>int addr_len</td></tr>
+    <tr><td>45</td><td><a href="">SYS_RECVFROM</a></td><td>int fd</td><td>void __user *ubuf</td><td>size_t size</td><td>unsigned int flags</td><td>struct sockaddr __user *addr</td><td>int __user *addr_len</td></tr>
+    <tr><td>46</td><td><a href="">SYS_SENDMSG</a></td><td>int fd</td><td>struct user_msghdr __user *msg</td><td>unsigned flags</td><td></td><td></td><td></td></tr>
+    <tr><td>47</td><td><a href="">SYS_RECVMSG</a></td><td>int fd</td><td>struct user_msghdr __user *msg</td><td>unsigned flags</td><td></td><td></td><td></td></tr>
+    <tr><td>48</td><td><a href="">SYS_SHUTDOWN</a></td><td>int fd</td><td>int how</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>49</td><td><a href="">SYS_BIND</a></td><td>int fd</td><td>struct sockaddr __user *umyaddr</td><td>int addrlen</td><td></td><td></td><td></td></tr>
+    <tr><td>50</td><td><a href="">SYS_LISTEN</a></td><td>int fd</td><td>int backlog</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>51</td><td><a href="">SYS_GETSOCKNAME</a></td><td>int fd</td><td>struct sockaddr __user *usockaddr</td><td>int __user *usockaddr_len</td><td></td><td></td><td></td></tr>
+    <tr><td>52</td><td><a href="">SYS_GETPEERNAME</a></td><td>int fd</td><td>struct sockaddr __user *usockaddr</td><td>int __user *usockaddr_len</td><td></td><td></td><td></td></tr>
+    <tr><td>53</td><td><a href="">SYS_SOCKETPAIR</a></td><td>int family</td><td>int type</td><td>int protocol</td><td>int __user *usockvec</td><td></td><td></td></tr>
+    <tr><td>54</td><td><a href="">SYS_SETSOCKOPT</a></td><td>int fd</td><td>int level</td><td>int optname</td><td>char __user *optval</td><td>int optlen</td><td></td></tr>
+    <tr><td>55</td><td><a href="">SYS_GETSOCKOPT</a></td><td>int fd</td><td>int level</td><td>int optname</td><td>char __user *optval</td><td>int __user *optlen</td><td></td></tr>
+    <tr><td>56</td><td><a href="">SYS_CLONE</a></td><td>unsigned long clone_flags</td><td>unsigned long newsp</td><td>int __user *parent_tidptr</td><td>unsigned long tls</td><td>int __user *child_tidptr</td><td></td></tr>
+    <tr><td>57</td><td><a href="">SYS_FORK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>58</td><td><a href="">SYS_VFORK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>59</td><td><a href="">SYS_EXECVE</a></td><td>const char __user *filename</td><td>const char __user *const __user *argv</td><td>const char __user *const __user *envp</td><td></td><td></td><td></td></tr>
+    <tr><td>60</td><td><a href="">SYS_EXIT</a></td><td>int error_code</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>61</td><td><a href="">SYS_WAIT4</a></td><td>pid_t pid</td><td>int __user *stat_addr</td><td>int options</td><td>struct rusage __user *ru</td><td></td><td></td></tr>
+    <tr><td>62</td><td><a href="">SYS_KILL</a></td><td>pid_t pid</td><td>int sig</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>63</td><td><a href="">SYS_UNAME</a></td><td>struct new_utsname __user *name</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>64</td><td><a href="">SYS_SEMGET</a></td><td>key_t key</td><td>int nsems</td><td>int semflg</td><td></td><td></td><td></td></tr>
+    <tr><td>65</td><td><a href="">SYS_SEMOP</a></td><td>int semid</td><td>struct sembuf __user *sops</td><td>unsigned nsops</td><td></td><td></td><td></td></tr>
+    <tr><td>66</td><td><a href="">SYS_SEMCTL</a></td><td>int semid</td><td>int semnum</td><td>int cmd</td><td>unsigned long arg</td><td></td><td></td></tr>
+    <tr><td>67</td><td><a href="">SYS_SHMDT</a></td><td>char __user *shmaddr</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>68</td><td><a href="">SYS_MSGGET</a></td><td>key_t key</td><td>int msgflg</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>69</td><td><a href="">SYS_MSGSND</a></td><td>int msqid</td><td>struct msgbuf __user *msgp</td><td>size_t msgsz</td><td>int msgflg</td><td></td><td></td></tr>
+    <tr><td>70</td><td><a href="">SYS_MSGRCV</a></td><td>int msqid</td><td>struct msgbuf __user *msgp</td><td>size_t msgsz</td><td>long msgtyp</td><td>int msgflg</td><td></td></tr>
+    <tr><td>71</td><td><a href="">SYS_MSGCTL</a></td><td>int msqid</td><td>int cmd</td><td>struct msqid_ds __user *buf</td><td></td><td></td><td></td></tr>
+    <tr><td>72</td><td><a href="">SYS_FCNTL</a></td><td>unsigned int fd</td><td>unsigned int cmd</td><td>unsigned long arg</td><td></td><td></td><td></td></tr>
+    <tr><td>73</td><td><a href="">SYS_FLOCK</a></td><td>unsigned int fd</td><td>unsigned int cmd</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>74</td><td><a href="">SYS_FSYNC</a></td><td>unsigned int fd</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>75</td><td><a href="">SYS_FDATASYNC</a></td><td>unsigned int fd</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>76</td><td><a href="">SYS_TRUNCATE</a></td><td>const char __user *path</td><td>long length</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>77</td><td><a href="">SYS_FTRUNCATE</a></td><td>unsigned int fd</td><td>unsigned long length</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>78</td><td><a href="">SYS_GETDENTS</a></td><td>unsigned int fd</td><td>struct linux_dirent __user *dirent</td><td>unsigned int count</td><td></td><td></td><td></td></tr>
+    <tr><td>79</td><td><a href="">SYS_GETCWD</a></td><td>char __user *buf</td><td>unsigned long size</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>80</td><td><a href="">SYS_CHDIR</a></td><td>const char __user *filename</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>81</td><td><a href="">SYS_FCHDIR</a></td><td>unsigned int fd</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>82</td><td><a href="">SYS_RENAME</a></td><td>const char __user *oldname</td><td>const char __user *newname</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>83</td><td><a href="">SYS_MKDIR</a></td><td>const char __user *pathname</td><td>umode_t mode</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>84</td><td><a href="">SYS_RMDIR</a></td><td>const char __user *pathname</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>85</td><td><a href="">SYS_CREAT</a></td><td>const char __user *pathname</td><td>umode_t mode</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>86</td><td><a href="">SYS_LINK</a></td><td>const char __user *oldname</td><td>const char __user *newname</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>87</td><td><a href="">SYS_UNLINK</a></td><td>const char __user *pathname</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>88</td><td><a href="">SYS_SYMLINK</a></td><td>const char __user *old</td><td>const char __user *new</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>89</td><td><a href="">SYS_READLINK</a></td><td>const char __user *path</td><td>char __user *buf</td><td>int bufsiz</td><td></td><td></td><td></td></tr>
+    <tr><td>90</td><td><a href="">SYS_CHMOD</a></td><td>const char __user *filename</td><td>umode_t mode</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>91</td><td><a href="">SYS_FCHMOD</a></td><td>unsigned int fd</td><td>umode_t mode</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>92</td><td><a href="">SYS_CHOWN</a></td><td>const char __user *filename</td><td>uid_t user</td><td>gid_t group</td><td></td><td></td><td></td></tr>
+    <tr><td>93</td><td><a href="">SYS_FCHOWN</a></td><td>unsigned int fd</td><td>uid_t user</td><td>gid_t group</td><td></td><td></td><td></td></tr>
+    <tr><td>94</td><td><a href="">SYS_LCHOWN</a></td><td>const char __user *filename</td><td>uid_t user</td><td>gid_t group</td><td></td><td></td><td></td></tr>
+    <tr><td>95</td><td><a href="">SYS_UMASK</a></td><td>int mask</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>96</td><td><a href="">SYS_GETTIMEOFDAY</a></td><td>struct __kernel_old_timeval __user *tv</td><td>struct timezone __user *tz</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>97</td><td><a href="">SYS_GETRLIMIT</a></td><td>unsigned int resource</td><td>struct rlimit __user *rlim</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>98</td><td><a href="">SYS_GETRUSAGE</a></td><td>int who</td><td>struct rusage __user *ru</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>99</td><td><a href="">SYS_SYSINFO</a></td><td>struct sysinfo __user *info</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>100</td><td><a href="">SYS_TIMES</a></td><td>struct tms __user *tbuf</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>101</td><td><a href="">SYS_PTRACE</a></td><td>long request</td><td>long pid</td><td>unsigned long addr</td><td>unsigned long data</td><td></td><td></td></tr>
+    <tr><td>102</td><td><a href="">SYS_GETUID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>103</td><td><a href="">SYS_SYSLOG</a></td><td>int type</td><td>char __user *buf</td><td>int len</td><td></td><td></td><td></td></tr>
+    <tr><td>104</td><td><a href="">SYS_GETGID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>105</td><td><a href="">SYS_SETUID</a></td><td>uid_t uid</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>106</td><td><a href="">SYS_SETGID</a></td><td>gid_t gid</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>107</td><td><a href="">SYS_GETEUID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>108</td><td><a href="">SYS_GETEGID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>109</td><td><a href="">SYS_SETPGID</a></td><td>pid_t pid</td><td>pid_t pgid</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>110</td><td><a href="">SYS_GETPPID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>111</td><td><a href="">SYS_GETPGRP</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>112</td><td><a href="">SYS_SETSID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>113</td><td><a href="">SYS_SETPRIORITY</a></td><td>int which</td><td>int who</td><td>int niceval</td><td></td><td></td><td></td></tr>
+    <tr><td>114</td><td><a href="">SYS_GETPRIORITY</a></td><td>int which</td><td>int who</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>115</td><td><a href="">SYS_SCHED_SETPARAM</a></td><td>pid_t pid</td><td>struct sched_param __user *param</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>116</td><td><a href="">SYS_SCHED_GETPARAM</a></td><td>pid_t pid</td><td>struct sched_param __user *param</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>117</td><td><a href="">SYS_SCHED_SETSCHEDULER</a></td><td>pid_t pid</td><td>int policy</td><td>struct sched_param __user *param</td><td></td><td></td><td></td></tr>
+    <tr><td>118</td><td><a href="">SYS_SCHED_GETSCHEDULER</a></td><td>pid_t pid</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>119</td><td><a href="">SYS_SCHED_YIELD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>120</td><td><a href="">SYS_SCHED_GET_PRIORITY_MAX</a></td><td>int policy</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>121</td><td><a href="">SYS_SCHED_GET_PRIORITY_MIN</a></td><td>int policy</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>122</td><td><a href="">SYS_SCHED_RR_GET_INTERVAL</a></td><td>pid_t pid</td><td>struct __kernel_timespec __user *interval</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>123</td><td><a href="">SYS_MLOCK</a></td><td>unsigned long start</td><td>size_t len</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>124</td><td><a href="">SYS_MUNLOCK</a></td><td>unsigned long start</td><td>size_t len</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>125</td><td><a href="">SYS_MLOCKALL</a></td><td>int flags</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>126</td><td><a href="">SYS_MUNLOCKALL</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>127</td><td><a href="">SYS_VHANGUP</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>128</td><td><a href="">SYS_MODIFY_LDT</a></td><td>int func</td><td>void __user *ptr</td><td>unsigned long bytecount</td><td></td><td></td><td></td></tr>
+    <tr><td>129</td><td><a href="">SYS_PIVOT_ROOT</a></td><td>const char __user *new_root</td><td>const char __user *put_old</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>130</td><td><a href="">SYS__SYSCTL</a></td><td>struct __sysctl_args __user *</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>131</td><td><a href="">SYS_PRCTL</a></td><td>int option</td><td>unsigned long arg2</td><td>unsigned long arg3</td><td>unsigned long arg4</td><td>unsigned long arg5</td><td></td></tr>
+    <tr><td>132</td><td><a href="">SYS_ARCH_PRCTL</a></td><td>int code</td><td>unsigned long addr</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>133</td><td><a href="">SYS_ADJTIMEX</a></td><td>struct __kernel_timex __user *txc_p</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>134</td><td><a href="">SYS_SETRLIMIT</a></td><td>unsigned int resource</td><td>struct rlimit __user *rlim</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>135</td><td><a href="">SYS_CHROOT</a></td><td>const char __user *filename</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>136</td><td><a href="">SYS_SYNC</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>137</td><td><a href="">SYS_ACCT</a></td><td>const char __user *name</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>138</td><td><a href="">SYS_SETTIMEOFDAY</a></td><td>struct __kernel_old_timeval __user *tv</td><td>struct timezone __user *tz</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>139</td><td><a href="">SYS_MOUNT</a></td><td>char __user *dev_name</td><td>char __user *dir_name</td><td>char __user *type</td><td>unsigned long flags</td><td>void __user *data</td><td></td></tr>
+    <tr><td>140</td><td><a href="">SYS_UMOUNT2</a></td><td>char __user *name</td><td>int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>141</td><td><a href="">SYS_SWAPON</a></td><td>const char __user *specialfile</td><td>int swap_flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>142</td><td><a href="">SYS_SWAPOFF</a></td><td>const char __user *specialfile</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>143</td><td><a href="">SYS_REBOOT</a></td><td>int magic1</td><td>int magic2</td><td>unsigned int cmd</td><td>void __user *arg</td><td></td><td></td></tr>
+    <tr><td>144</td><td><a href="">SYS_SETHOSTNAME</a></td><td>char __user *name</td><td>int len</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>145</td><td><a href="">SYS_SETDOMAINNAME</a></td><td>char __user *name</td><td>int len</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>146</td><td><a href="">SYS_IOPL</a></td><td>unsigned int level</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>147</td><td><a href="">SYS_IOPERM</a></td><td>unsigned long from</td><td>unsigned long num</td><td>int on</td><td></td><td></td><td></td></tr>
+    <tr><td>148</td><td><a href="">SYS_CREATE_MODULE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>149</td><td><a href="">SYS_INIT_MODULE</a></td><td>void __user *umod</td><td>unsigned long len</td><td>const char __user *uargs</td><td></td><td></td><td></td></tr>
+    <tr><td>150</td><td><a href="">SYS_DELETE_MODULE</a></td><td>const char __user *name_user</td><td>unsigned int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>151</td><td><a href="">SYS_GET_KERNEL_SYMS</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>152</td><td><a href="">SYS_QUERY_MODULE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>153</td><td><a href="">SYS_QUOTACTL</a></td><td>unsigned int cmd</td><td>const char __user *special</td><td>qid_t id</td><td>void __user *addr</td><td></td><td></td></tr>
+    <tr><td>154</td><td><a href="">SYS_NFSSERVCTL</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>155</td><td><a href="">SYS_GETPMSG</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>156</td><td><a href="">SYS_PUTPMSG</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>157</td><td><a href="">SYS_AFS_SYSCALL</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>158</td><td><a href="">SYS_TUXCALL</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>159</td><td><a href="">SYS_SECURITY</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>160</td><td><a href="">SYS_GETTID</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>161</td><td><a href="">SYS_READAHEAD</a></td><td>int fd</td><td>loff_t offset</td><td>size_t count</td><td></td><td></td><td></td></tr>
+    <tr><td>162</td><td><a href="">SYS_SETXATTR</a></td><td>const char __user *path</td><td>const char __user *name</td><td>const void __user *value</td><td>size_t size</td><td>int flags</td><td></td></tr>
+    <tr><td>163</td><td><a href="">SYS_LSETXATTR</a></td><td>const char __user *path</td><td>const char __user *name</td><td>const void __user *value</td><td>size_t size</td><td>int flags</td><td></td></tr>
+    <tr><td>164</td><td><a href="">SYS_FSETXATTR</a></td><td>int fd</td><td>const char __user *name</td><td>const void __user *value</td><td>size_t size</td><td>int flags</td><td></td></tr>
+    <tr><td>165</td><td><a href="">SYS_GETXATTR</a></td><td>const char __user *path</td><td>const char __user *name</td><td>void __user *value</td><td>size_t size</td><td></td><td></td></tr>
+    <tr><td>166</td><td><a href="">SYS_LGETXATTR</a></td><td>const char __user *path</td><td>const char __user *name</td><td>void __user *value</td><td>size_t size</td><td></td><td></td></tr>
+    <tr><td>167</td><td><a href="">SYS_FGETXATTR</a></td><td>int fd</td><td>const char __user *name</td><td>void __user *value</td><td>size_t size</td><td></td><td></td></tr>
+    <tr><td>168</td><td><a href="">SYS_LISTXATTR</a></td><td>const char __user *path</td><td>char __user *list</td><td>size_t size</td><td></td><td></td><td></td></tr>
+    <tr><td>169</td><td><a href="">SYS_LLISTXATTR</a></td><td>const char __user *path</td><td>char __user *list</td><td>size_t size</td><td></td><td></td><td></td></tr>
+    <tr><td>170</td><td><a href="">SYS_FLISTXATTR</a></td><td>int fd</td><td>char __user *list</td><td>size_t size</td><td></td><td></td><td></td></tr>
+    <tr><td>171</td><td><a href="">SYS_REMOVEXATTR</a></td><td>const char __user *path</td><td>const char __user *name</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>172</td><td><a href="">SYS_LREMOVEXATTR</a></td><td>const char __user *path</td><td>const char __user *name</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>173</td><td><a href="">SYS_FREMOVEXATTR</a></td><td>int fd</td><td>const char __user *name</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>174</td><td><a href="">SYS_TKILL</a></td><td>pid_t pid</td><td>int sig</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>175</td><td><a href="">SYS_TIME</a></td><td>__kernel_old_time_t __user *tloc</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>176</td><td><a href="">SYS_FUTEX</a></td><td>u32 __user *uaddr</td><td>int op</td><td>u32 val</td><td>const struct __kernel_timespec __user *utime</td><td>u32 __user *uaddr2</td><td>u32 val3</td></tr>
+    <tr><td>177</td><td><a href="">SYS_SCHED_SETAFFINITY</a></td><td>pid_t pid</td><td>unsigned int len</td><td>unsigned long __user *user_mask_ptr</td><td></td><td></td><td></td></tr>
+    <tr><td>178</td><td><a href="">SYS_SCHED_GETAFFINITY</a></td><td>pid_t pid</td><td>unsigned int len</td><td>unsigned long __user *user_mask_ptr</td><td></td><td></td><td></td></tr>
+    <tr><td>179</td><td><a href="">SYS_SET_THREAD_AREA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>180</td><td><a href="">SYS_IO_SETUP</a></td><td>unsigned nr_reqs</td><td>aio_context_t __user *ctx</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>181</td><td><a href="">SYS_IO_DESTROY</a></td><td>aio_context_t ctx</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>182</td><td><a href="">SYS_IO_GETEVENTS</a></td><td>aio_context_t ctx_id</td><td>long min_nr</td><td>long nr</td><td>struct io_event __user *events</td><td>struct __kernel_timespec __user *timeout</td><td></td></tr>
+    <tr><td>183</td><td><a href="">SYS_IO_SUBMIT</a></td><td>aio_context_t</td><td>long</td><td>struct iocb __user * __user *</td><td></td><td></td><td></td></tr>
+    <tr><td>184</td><td><a href="">SYS_IO_CANCEL</a></td><td>aio_context_t ctx_id</td><td>struct iocb __user *iocb</td><td>struct io_event __user *result</td><td></td><td></td><td></td></tr>
+    <tr><td>185</td><td><a href="">SYS_GET_THREAD_AREA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>186</td><td><a href="">SYS_LOOKUP_DCOOKIE</a></td><td>u64 cookie64</td><td>char __user *buf</td><td>size_t len</td><td></td><td></td><td></td></tr>
+    <tr><td>187</td><td><a href="">SYS_EPOLL_CREATE</a></td><td>int size</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>188</td><td><a href="">SYS_EPOLL_CTL_OLD</a></td><td>int epfd</td><td>int op</td><td>int fd</td><td>struct epoll_event __user *event</td><td></td><td></td></tr>
+    <tr><td>189</td><td><a href="">SYS_EPOLL_WAIT_OLD</a></td><td>int epfd</td><td>struct epoll_event __user *events</td><td>int maxevents</td><td>int timeout</td><td></td><td></td></tr>
+    <tr><td>190</td><td><a href="">SYS_REMAP_FILE_PAGES</a></td><td>unsigned long start</td><td>unsigned long size</td><td>unsigned long prot</td><td>unsigned long pgoff</td><td>unsigned long flags</td><td></td></tr>
+    <tr><td>191</td><td><a href="">SYS_GETDENTS64</a></td><td>unsigned int fd</td><td>struct linux_dirent64 __user *dirent</td><td>unsigned int count</td><td></td><td></td><td></td></tr>
+    <tr><td>192</td><td><a href="">SYS_SET_TID_ADDRESS</a></td><td>int __user *tidptr</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>193</td><td><a href="">SYS_RESTART_SYSCALL</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>194</td><td><a href="">SYS_SEMTIMEDOP</a></td><td>int semid</td><td>struct sembuf __user *sops</td><td>unsigned nsops</td><td>const struct __kernel_timespec __user *timeout</td><td></td><td></td></tr>
+    <tr><td>195</td><td><a href="">SYS_FADVISE64</a></td><td>int fd</td><td>loff_t offset</td><td>size_t len</td><td>int advice</td><td></td><td></td></tr>
+    <tr><td>196</td><td><a href="">SYS_TIMER_CREATE</a></td><td>clockid_t which_clock</td><td>struct sigevent __user *timer_event_spec</td><td>timer_t __user *created_timer_id</td><td></td><td></td><td></td></tr>
+    <tr><td>197</td><td><a href="">SYS_TIMER_SETTIME</a></td><td>timer_t timer_id</td><td>int flags</td><td>const struct __kernel_itimerspec __user *new_setting</td><td>struct __kernel_itimerspec __user *old_setting</td><td></td><td></td></tr>
+    <tr><td>198</td><td><a href="">SYS_TIMER_GETTIME</a></td><td>timer_t timer_id</td><td>struct __kernel_itimerspec __user *setting</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>199</td><td><a href="">SYS_TIMER_GETOVERRUN</a></td><td>timer_t timer_id</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>200</td><td><a href="">SYS_TIMER_DELETE</a></td><td>timer_t timer_id</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>201</td><td><a href="">SYS_CLOCK_SETTIME</a></td><td>clockid_t which_clock</td><td>const struct __kernel_timespec __user *tp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>202</td><td><a href="">SYS_CLOCK_GETTIME</a></td><td>clockid_t which_clock</td><td>struct __kernel_timespec __user *tp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>203</td><td><a href="">SYS_CLOCK_GETRES</a></td><td>clockid_t which_clock</td><td>struct __kernel_timespec __user *tp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>204</td><td><a href="">SYS_CLOCK_NANOSLEEP</a></td><td>clockid_t which_clock</td><td>int flags</td><td>const struct __kernel_timespec __user *rqtp</td><td>struct __kernel_timespec __user *rmtp</td><td></td><td></td></tr>
+    <tr><td>205</td><td><a href="">SYS_EXIT_GROUP</a></td><td>int error_code</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>206</td><td><a href="">SYS_EPOLL_WAIT</a></td><td>int epfd</td><td>struct epoll_event __user *events</td><td>int maxevents</td><td>int timeout</td><td></td><td></td></tr>
+    <tr><td>207</td><td><a href="">SYS_EPOLL_CTL</a></td><td>int epfd</td><td>int op</td><td>int fd</td><td>struct epoll_event __user *event</td><td></td><td></td></tr>
+    <tr><td>208</td><td><a href="">SYS_TGKILL</a></td><td>pid_t tgid</td><td>pid_t pid</td><td>int sig</td><td></td><td></td><td></td></tr>
+    <tr><td>209</td><td><a href="">SYS_UTIMES</a></td><td>char __user *filename</td><td>struct __kernel_old_timeval __user *utimes</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>210</td><td><a href="">SYS_VSERVER</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>211</td><td><a href="">SYS_MBIND</a></td><td>unsigned long start</td><td>unsigned long len</td><td>unsigned long mode</td><td>const unsigned long __user *nmask</td><td>unsigned long maxnode</td><td>unsigned flags</td></tr>
+    <tr><td>212</td><td><a href="">SYS_SET_MEMPOLICY</a></td><td>int mode</td><td>const unsigned long __user *nmask</td><td>unsigned long maxnode</td><td></td><td></td><td></td></tr>
+    <tr><td>213</td><td><a href="">SYS_GET_MEMPOLICY</a></td><td>int __user *policy</td><td>unsigned long __user *nmask</td><td>unsigned long maxnode</td><td>unsigned long addr</td><td>unsigned long flags</td><td></td></tr>
+    <tr><td>214</td><td><a href="">SYS_MQ_OPEN</a></td><td>const char __user *name</td><td>int oflag</td><td>umode_t mode</td><td>struct mq_attr __user *attr</td><td></td><td></td></tr>
+    <tr><td>215</td><td><a href="">SYS_MQ_UNLINK</a></td><td>const char __user *name</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>216</td><td><a href="">SYS_MQ_TIMEDSEND</a></td><td>mqd_t mqdes</td><td>const char __user *msg_ptr</td><td>size_t msg_len</td><td>unsigned int msg_prio</td><td>const struct __kernel_timespec __user *abs_timeout</td><td></td></tr>
+    <tr><td>217</td><td><a href="">SYS_MQ_TIMEDRECEIVE</a></td><td>mqd_t mqdes</td><td>char __user *msg_ptr</td><td>size_t msg_len</td><td>unsigned int __user *msg_prio</td><td>const struct __kernel_timespec __user *abs_timeout</td><td></td></tr>
+    <tr><td>218</td><td><a href="">SYS_MQ_NOTIFY</a></td><td>mqd_t mqdes</td><td>const struct sigevent __user *notification</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>219</td><td><a href="">SYS_MQ_GETSETATTR</a></td><td>mqd_t mqdes</td><td>const struct mq_attr __user *mqstat</td><td>struct mq_attr __user *omqstat</td><td></td><td></td><td></td></tr>
+    <tr><td>220</td><td><a href="">SYS_KEXEC_LOAD</a></td><td>unsigned long entry</td><td>unsigned long nr_segments</td><td>struct kexec_segment __user *segments</td><td>unsigned long flags</td><td></td><td></td></tr>
+    <tr><td>221</td><td><a href="">SYS_WAITID</a></td><td>int which</td><td>pid_t pid</td><td>struct siginfo __user *infop</td><td>int options</td><td>struct rusage __user *ru</td><td></td></tr>
+    <tr><td>222</td><td><a href="">SYS_ADD_KEY</a></td><td>const char __user *_type</td><td>const char __user *_description</td><td>const void __user *_payload</td><td>size_t plen</td><td>key_serial_t destringid</td><td></td></tr>
+    <tr><td>223</td><td><a href="">SYS_REQUEST_KEY</a></td><td>const char __user *_type</td><td>const char __user *_description</td><td>const char __user *_callout_info</td><td>key_serial_t destringid</td><td></td><td></td></tr>
+    <tr><td>224</td><td><a href="">SYS_KEYCTL</a></td><td>int cmd</td><td>unsigned long arg2</td><td>unsigned long arg3</td><td>unsigned long arg4</td><td>unsigned long arg5</td><td></td></tr>
+    <tr><td>225</td><td><a href="">SYS_IOPRIO_SET</a></td><td>int which</td><td>int who</td><td>int ioprio</td><td></td><td></td><td></td></tr>
+    <tr><td>226</td><td><a href="">SYS_IOPRIO_GET</a></td><td>int which</td><td>int who</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>227</td><td><a href="">SYS_INOTIFY_INIT</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>228</td><td><a href="">SYS_INOTIFY_ADD_WATCH</a></td><td>int fd</td><td>const char __user *pathname</td><td>u32 mask</td><td></td><td></td><td></td></tr>
+    <tr><td>229</td><td><a href="">SYS_INOTIFY_RM_WATCH</a></td><td>int fd</td><td>__s32 wd</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>230</td><td><a href="">SYS_MIGRATE_PAGES</a></td><td>pid_t pid</td><td>unsigned long maxnode</td><td>const unsigned long __user *from</td><td>const unsigned long __user *to</td><td></td><td></td></tr>
+    <tr><td>231</td><td><a href="">SYS_OPENAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>int flags</td><td>umode_t mode</td><td></td><td></td></tr>
+    <tr><td>232</td><td><a href="">SYS_MKDIRAT</a></td><td>int dfd</td><td>const char __user *pathname</td><td>umode_t mode</td><td></td><td></td><td></td></tr>
+    <tr><td>233</td><td><a href="">SYS_MKNODAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>umode_t mode</td><td>unsigned dev</td><td></td><td></td></tr>
+    <tr><td>234</td><td><a href="">SYS_FCHOWNAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>uid_t user</td><td>gid_t group</td><td>int flag</td><td></td></tr>
+    <tr><td>235</td><td><a href="">SYS_FUTIMESAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>struct __kernel_old_timeval __user *utimes</td><td></td><td></td><td></td></tr>
+    <tr><td>236</td><td><a href="">SYS_NEWFSTATAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>struct stat __user *statbuf</td><td>int flag</td><td></td><td></td></tr>
+    <tr><td>237</td><td><a href="">SYS_UNLINKAT</a></td><td>int dfd</td><td>const char __user *pathname</td><td>int flag</td><td></td><td></td></tr>
+    <tr><td>238</td><td><a href="">SYS_RENAMEAT</a></td><td>int olddfd</td><td>const char __user *oldname</td><td>int newdfd</td><td>const char __user *newname</td><td></td><td></td></tr>
+    <tr><td>239</td><td><a href="">SYS_LINKAT</a></td><td>int olddfd</td><td>const char __user *oldname</td><td>int newdfd</td><td>const char __user *newname</td><td>int flags</td><td></td></tr>
+    <tr><td>240</td><td><a href="">SYS_SYMLINKAT</a></td><td>const char __user *oldname</td><td>int newdfd</td><td>const char __user *newname</td><td></td><td></td><td></td></tr>
+    <tr><td>241</td><td><a href="">SYS_READLINKAT</a></td><td>int dfd</td><td>const char __user *path</td><td>char __user *buf</td><td>int bufsiz</td><td></td><td></td></tr>
+    <tr><td>242</td><td><a href="">SYS_FCHMODAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>umode_t mode</td><td></td><td></td><td></td></tr>
+    <tr><td>243</td><td><a href="">SYS_FACCESSAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>int mode</td><td></td><td></td><td></td></tr>
+    <tr><td>244</td><td><a href="">SYS_PSELECT6</a></td><td>int nfds</td><td>fd_set __user *readfds</td><td>fd_set __user *writefds</td><td>fd_set __user *exceptfds</td><td>struct __kernel_timespec __user *timeout</td><td>struct sigset_t __user *sigmask</td></tr>
+    <tr><td>245</td><td><a href="">SYS_PPOLL</a></td><td>struct pollfd __user *ufds</td><td>unsigned int nfds</td><td>struct __kernel_timespec __user *tsp</td><td>const sigset_t __user *sigmask</td><td>size_t sigsetsize</td><td></td></tr>
+    <tr><td>246</td><td><a href="">SYS_UNSHARE</a></td><td>unsigned long unshare_flags</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>247</td><td><a href="">SYS_SET_ROBUST_LIST</a></td><td>struct robust_list_head __user *head</td><td>size_t len</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>248</td><td><a href="">SYS_GET_ROBUST_LIST</a></td><td>int pid</td><td>struct robust_list_head __user * __user *head_ptr</td><td>size_t __user *len_ptr</td><td></td><td></td><td></td></tr>
+    <tr><td>249</td><td><a href="">SYS_SPLICE</a></td><td>int fd_in</td><td>loff_t __user *off_in</td><td>int fd_out</td><td>loff_t __user *off_out</td><td>size_t len</td><td>unsigned int flags</td></tr>
+    <tr><td>250</td><td><a href="">SYS_TEE</a></td><td>int fdin</td><td>int fdout</td><td>size_t len</td><td>unsigned int flags</td><td></td><td></td></tr>
+    <tr><td>251</td><td><a href="">SYS_SYNC_FILE_RANGE</a></td><td>int fd</td><td>loff_t offset</td><td>loff_t nbytes</td><td>unsigned int flags</td><td></td><td></td></tr>
+    <tr><td>252</td><td><a href="">SYS_VMSPLICE</a></td><td>int fd</td><td>const struct iovec __user *iov</td><td>unsigned long nr_segs</td><td>unsigned int flags</td><td></td><td></td></tr>
+    <tr><td>253</td><td><a href="">SYS_MOVE_PAGES</a></td><td>pid_t pid</td><td>unsigned long nr_pages</td><td>const void __user * __user *pages</td><td>const int __user *nodes</td><td>int __user *status</td><td>int flags</td></tr>
+    <tr><td>254</td><td><a href="">SYS_UTIMENSAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>struct __kernel_timespec __user *utimes</td><td>int flags</td><td></td><td></td></tr>
+    <tr><td>255</td><td><a href="">SYS_EPOLL_PWAIT</a></td><td>int epfd</td><td>struct epoll_event __user *events</td><td>int maxevents</td><td>int timeout</td><td>const sigset_t __user *sigmask</td><td>size_t sigsetsize</td></tr>
+    <tr><td>256</td><td><a href="">SYS_SIGNALFD</a></td><td>int ufd</td><td>sigset_t __user *user_mask</td><td>size_t sizemask</td><td></td><td></td><td></td></tr>
+    <tr><td>257</td><td><a href="">SYS_TIMERFD_CREATE</a></td><td>int clockid</td><td>int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>258</td><td><a href="">SYS_EVENTFD</a></td><td>unsigned int count</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>259</td><td><a href="">SYS_FALLOCATE</a></td><td>int fd</td><td>int mode</td><td>loff_t offset</td><td>loff_t len</td><td></td><td></td></tr>
+    <tr><td>260</td><td><a href="">SYS_TIMERFD_SETTIME</a></td><td>int ufd</td><td>int flags</td><td>const struct __kernel_itimerspec __user *utmr</td><td>struct __kernel_itimerspec __user *otmr</td><td></td><td></td></tr>
+    <tr><td>261</td><td><a href="">SYS_TIMERFD_GETTIME</a></td><td>int ufd</td><td>struct __kernel_itimerspec __user *otmr</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>262</td><td><a href="">SYS_ACCEPT4</a></td><td>int fd</td><td>struct sockaddr __user *upeer_sockaddr</td><td>int __user *upeer_addrlen</td><td>int flags</td><td></td><td></td></tr>
+    <tr><td>263</td><td><a href="">SYS_SIGNALFD4</a></td><td>int ufd</td><td>sigset_t __user *user_mask</td><td>size_t sizemask</td><td>int flags</td><td></td><td></td></tr>
+    <tr><td>264</td><td><a href="">SYS_EVENTFD2</a></td><td>unsigned int count</td><td>int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>265</td><td><a href="">SYS_EPOLL_CREATE1</a></td><td>int flags</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>266</td><td><a href="">SYS_DUP3</a></td><td>unsigned int oldfd</td><td>unsigned int newfd</td><td>int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>267</td><td><a href="">SYS_PIPE2</a></td><td>int __user *fildes</td><td>int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>268</td><td><a href="">SYS_INOTIFY_INIT1</a></td><td>int flags</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>269</td><td><a href="">SYS_PREADV</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td>unsigned long pos_l</td><td>unsigned long pos_h</td><td></td></tr>
+    <tr><td>270</td><td><a href="">SYS_PWRITEV</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td>unsigned long pos_l</td><td>unsigned long pos_h</td><td></td></tr>
+    <tr><td>271</td><td><a href="">SYS_RT_TGSIGQUEUEINFO</a></td><td>pid_t tgid</td><td>pid_t pid</td><td>int sig</td><td>siginfo_t __user *uinfo</td><td></td><td></td></tr>
+    <tr><td>272</td><td><a href="">SYS_PERF_EVENT_OPEN</a></td><td>struct perf_event_attr __user *attr_uptr</td><td>pid_t pid</td><td>int cpu</td><td>int group_fd</td><td>unsigned long flags</td><td></td></tr>
+    <tr><td>273</td><td><a href="">SYS_RECVMMSG</a></td><td>int fd</td><td>struct mmsghdr __user *msg</td><td>unsigned int vlen</td><td>unsigned flags</td><td>struct __kernel_timespec __user *timeout</td><td></td></tr>
+    <tr><td>274</td><td><a href="">SYS_FANOTIFY_INIT</a></td><td>unsigned int flags</td><td>unsigned int event_f_flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>275</td><td><a href="">SYS_FANOTIFY_MARK</a></td><td>int fanotify_fd</td><td>unsigned int flags</td><td>u64 mask</td><td>int fd</td><td>const char __user *pathname</td><td></td></tr>
+    <tr><td>276</td><td><a href="">SYS_PRLIMIT64</a></td><td>pid_t pid</td><td>unsigned int resource</td><td>const struct rlimit64 __user *new_rlim</td><td>struct rlimit64 __user *old_rlim</td><td></td><td></td></tr>
+    <tr><td>277</td><td><a href="">SYS_NAME_TO_HANDLE_AT</a></td><td>int dfd</td><td>const char __user *name</td><td>struct file_handle __user *handle</td><td>int __user *mnt_id</td><td>int flag</td><td></td></tr>
+    <tr><td>278</td><td><a href="">SYS_OPEN_BY_HANDLE_AT</a></td><td>int mountdirfd</td><td>struct file_handle __user *handle</td><td>int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>279</td><td><a href="">SYS_CLOCK_ADJTIME</a></td><td>clockid_t which_clock</td><td>struct __kernel_timex __user *tx</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>280</td><td><a href="">SYS_SYNCFS</a></td><td>int fd</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>281</td><td><a href="">SYS_SETNS</a></td><td>int fd</td><td>int nstype</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>282</td><td><a href="">SYS_SENDMMSG</a></td><td>int fd</td><td>struct mmsghdr __user *msg</td><td>unsigned int vlen</td><td>unsigned flags</td><td></td><td></td></tr>
+    <tr><td>283</td><td><a href="">SYS_PROCESS_VM_READV</a></td><td>pid_t pid</td><td>const struct iovec __user *lvec</td><td>unsigned long liovcnt</td><td>const struct iovec __user *rvec</td><td>unsigned long riovcnt</td><td>unsigned long flags</td></tr>
+    <tr><td>284</td><td><a href="">SYS_PROCESS_VM_WRITEV</a></td><td>pid_t pid</td><td>const struct iovec __user *lvec</td><td>unsigned long liovcnt</td><td>const struct iovec __user *rvec</td><td>unsigned long riovcnt</td><td>unsigned long flags</td></tr>
+    <tr><td>285</td><td><a href="">SYS_KCMP</a></td><td>pid_t pid1</td><td>pid_t pid2</td><td>int type</td><td>unsigned long idx1</td><td>unsigned long idx2</td><td></td></tr>
+    <tr><td>286</td><td><a href="">SYS_FINIT_MODULE</a></td><td>int fd</td><td>const char __user *uargs</td><td>int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>287</td><td><a href="">SYS_SCHED_SETATTR</a></td><td>pid_t pid</td><td>struct sched_attr __user *attr</td><td>unsigned int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>288</td><td><a href="">SYS_SCHED_GETATTR</a></td><td>pid_t pid</td><td>struct sched_attr __user *attr</td><td>unsigned int size</td><td>unsigned int flags</td><td></td><td></td></tr>
+    <tr><td>289</td><td><a href="">SYS_RENAMEAT2</a></td><td>int olddfd</td><td>const char __user *oldname</td><td>int newdfd</td><td>const char __user *newname</td><td>unsigned int flags</td><td></td></tr>
+    <tr><td>290</td><td><a href="">SYS_SECCOMP</a></td><td>unsigned int op</td><td>unsigned int flags</td><td>void __user *uargs</td><td></td><td></td><td></td></tr>
+    <tr><td>291</td><td><a href="">SYS_GETRANDOM</a></td><td>char __user *buf</td><td>size_t count</td><td>unsigned int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>292</td><td><a href="">SYS_MEMFD_CREATE</a></td><td>const char __user *uname_ptr</td><td>unsigned int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>293</td><td><a href="">SYS_KEXEC_FILE_LOAD</a></td><td>int kernel_fd</td><td>int initrd_fd</td><td>unsigned long cmdline_len</td><td>const char __user *cmdline_ptr</td><td>unsigned long flags</td><td></td></tr>
+    <tr><td>294</td><td><a href="">SYS_BPF</a></td><td>int cmd</td><td>union bpf_attr *attr</td><td>unsigned int size</td><td></td><td></td><td></td></tr>
+    <tr><td>295</td><td><a href="">SYS_EXECVEAT</a></td><td>int dfd</td><td>const char __user *filename</td><td>const char __user *const __user *argv</td><td>const char __user *const __user *envp</td><td>int flags</td><td></td></tr>
+    <tr><td>296</td><td><a href="">SYS_USERFAULTFD</a></td><td>int flags</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>297</td><td><a href="">SYS_MEMBARRIER</a></td><td>int cmd</td><td>unsigned int flags</td><td>int cpu_id</td><td></td><td></td><td></td></tr>
+    <tr><td>298</td><td><a href="">SYS_MLOCK2</a></td><td>unsigned long start</td><td>size_t len</td><td>int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>299</td><td><a href="">SYS_COPY_FILE_RANGE</a></td><td>int fd_in</td><td>loff_t __user *off_in</td><td>int fd_out</td><td>loff_t __user *off_out</td><td>size_t len</td><td>unsigned int flags</td></tr>
+    <tr><td>300</td><td><a href="">SYS_PREADV2</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td>unsigned long pos_l</td><td>unsigned long pos_h</td><td>rwf_t flags</td></tr>
+    <tr><td>301</td><td><a href="">SYS_PWRITEV2</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td>unsigned long pos_l</td><td>unsigned long pos_h</td><td>rwf_t flags</td></tr>
+    <tr><td>302</td><td><a href="">SYS_PKEY_MPROTECT</a></td><td>unsigned long start</td><td>size_t len</td><td>unsigned long prot</td><td>int pkey</td><td></td><td></td></tr>
+    <tr><td>303</td><td><a href="">SYS_PKEY_ALLOC</a></td><td>unsigned long flags</td><td>unsigned long init_val</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>304</td><td><a href="">SYS_PKEY_FREE</a></td><td>int pkey</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>305</td><td><a href="">SYS_STATX</a></td><td>int dfd</td><td>const char __user *path</td><td>unsigned flags</td><td>unsigned mask</td><td>struct statx __user *buffer</td><td></td></tr>
+    <tr><td>306</td><td><a href="">SYS_RSEQ</a></td><td>struct rseq __user *rseq</td><td>uint32_t rseq_len</td><td>int flags</td><td>uint32_t sig</td><td></td><td></td></tr>
+    <tr><td>307</td><td><a href="">SYS_IO_PGETEVENTS</a></td><td>aio_context_t ctx_id</td><td>long min_nr</td><td>long nr</td><td>struct io_event __user *events</td><td>struct __kernel_timespec __user *timeout</td><td>const struct __aio_sigset *sig</td></tr>
+    <tr><td>308</td><td><a href="">SYS_MIGRATE_PAGES2</a></td><td>pid_t pid</td><td>unsigned long maxnode</td><td>const unsigned long __user *from</td><td>const unsigned long __user *to</td><td></td><td></td></tr>
+    <tr><td>309</td><td><a href="">SYS_STATX64</a></td><td>int dfd</td><td>const char __user *path</td><td>unsigned flags</td><td>unsigned mask</td><td>struct statx __user *buffer</td><td></td></tr>
+    <tr><td>310</td><td><a href="">SYS_GETTID64</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>311</td><td><a href="">SYS_MMAP64</a></td><td>unsigned long addr</td><td>unsigned long len</td><td>unsigned long prot</td><td>unsigned long flags</td><td>unsigned long fd</td><td>unsigned long pgoff</td></tr>
+    <tr><td>312</td><td><a href="">SYS_MREMAP64</a></td><td>unsigned long addr</td><td>unsigned long old_len</td><td>unsigned long new_len</td><td>unsigned long flags</td><td>unsigned long new_addr</td><td></td></tr>
+    <tr><td>313</td><td><a href="">SYS_MINCORE64</a></td><td>unsigned long start</td><td>size_t len</td><td>unsigned char __user *vec</td><td></td><td></td><td></td></tr>
+    <tr><td>314</td><td><a href="">SYS_CLOCK_SETTIME64</a></td><td>clockid_t which_clock</td><td>struct __kernel_timespec __user *tp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>315</td><td><a href="">SYS_CLOCK_GETTIME64</a></td><td>clockid_t which_clock</td><td>struct __kernel_timespec __user *tp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>316</td><td><a href="">SYS_CLOCK_GETRES64</a></td><td>clockid_t which_clock</td><td>struct __kernel_timespec __user *tp</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>317</td><td><a href="">SYS_CLOCK_NANOSLEEP64</a></td><td>clockid_t which_clock</td><td>int flags</td><td>const struct __kernel_timespec __user *rqtp</td><td>struct __kernel_timespec __user *rmtp</td><td></td><td></td></tr>
+    <tr><td>318</td><td><a href="">SYS_IO_URING_SETUP</a></td><td>u32 entries</td><td>struct io_uring_params __user *p</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>319</td><td><a href="">SYS_IO_URING_ENTER</a></td><td>unsigned int fd</td><td>u32 to_submit</td><td>u32 min_complete</td><td>u32 flags</td><td>const void __user *argp</td><td>size_t argsz</td></tr>
+    <tr><td>320</td><td><a href="">SYS_IO_URING_REGISTER</a></td><td>unsigned int fd</td><td>unsigned int op</td><td>void __user *arg</td><td>unsigned int nr_args</td><td></td><td></td></tr>
+    <tr><td>321</td><td><a href="">SYS_LANDLOCK_CREATE_RULESET</a></td><td>const struct landlock_ruleset_attr __user *attr</td><td>size_t size</td><td>__u32 flags</td><td></td><td></td><td></td></tr>
+    <tr><td>322</td><td><a href="">SYS_LANDLOCK_ADD_RULE</a></td><td>int ruleset_fd</td><td>enum landlock_rule_type rule_type</td><td>const void __user *rule_attr</td><td>__u32 flags</td><td></td><td></td></tr>
+    <tr><td>323</td><td><a href="">SYS_LANDLOCK_RESTRICT_SELF</a></td><td>int ruleset_fd</td><td>__u32 flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>324</td><td><a href="">SYS_MEMFD_SECRET</a></td><td>unsigned int flags</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>325</td><td><a href="">SYS_MAP_SHADOW_STACK</a></td><td>unsigned long addr</td><td>unsigned long size</td><td>unsigned int flags</td><td></td><td></td><td></td></tr>
+    <tr><td>326</td><td><a href="">SYS_KEXEC_FILE_LOAD64</a></td><td>int kernel_fd</td><td>int initrd_fd</td><td>unsigned long cmdline_len</td><td>const char __user *cmdline_ptr</td><td>unsigned long flags</td><td></td></tr>
+    <tr><td>327</td><td><a href="">SYS_MEMFD_CREATE64</a></td><td>const char __user *uname_ptr</td><td>unsigned int flags</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>328</td><td><a href="">SYS_COPY_FILE_RANGE64</a></td><td>int fd_in</td><td>loff_t __user *off_in</td><td>int fd_out</td><td>loff_t __user *off_out</td><td>size_t len</td><td>unsigned int flags</td></tr>
+    <tr><td>329</td><td><a href="">SYS_PREADV264</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td>unsigned long pos_l</td><td>unsigned long pos_h</td><td>rwf_t flags</td></tr>
+    <tr><td>330</td><td><a href="">SYS_PWRITEV264</a></td><td>unsigned long fd</td><td>const struct iovec __user *vec</td><td>unsigned long vlen</td><td>unsigned long pos_l</td><td>unsigned long pos_h</td><td>rwf_t flags</td></tr>
+    <tr><td>331</td><td><a href="">SYS_IO_PGETEVENTS64</a></td><td>aio_context_t ctx_id</td><td>long min_nr</td><td>long nr</td><td>struct io_event __user *events</td><td>struct __kernel_timespec __user *timeout</td><td>const struct __aio_sigset *sig</td></tr>
+    <tr><td>332</td><td><a href="">SYS_PKEY_ALLOC64</a></td><td>unsigned long flags</td><td>unsigned long init_val</td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>
+</body>
+</html>
